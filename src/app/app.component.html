@@ -14,11 +14,15 @@
     <div class="h-40 bg-gradient-to-b from-gray-800 to-gray-700 text-right">
       <!-- function screen -->
 
-      <div class="w-full py-5 px-6 text-2xl text-white font-thin">Function</div>
+      <div class="w-full py-5 px-6 text-2xl text-white font-thin">
+        {{ funcT }}
+      </div>
 
       <!-- number screen -->
 
-      <div class="w-full py-5 px-6 text-6xl text-white font-thin">100</div>
+      <div class="w-full py-5 px-6 text-6xl text-white font-thin">
+        {{ calValue | number }}
+      </div>
     </div>
 
     <!-- end of calculator screen -->
@@ -31,6 +35,7 @@
         <div class="w-2/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none hover:bg-red-700 hover:bg-opacity-50 text-white text-xl font-light"
+            (click)="onClickValue('c', 'function')"
           >
             C
           </button>
@@ -40,6 +45,7 @@
         <div class="flex w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none hover:bg-red-700 hover:bg-opacity-50 text-white text-xl font-light"
+            (click)="onClickValue('%', 'function')"
           >
             %
           </button>
@@ -50,6 +56,7 @@
         <div class="flex w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none hover:bg-red-700 hover:bg-opacity-50 text-white text-xl font-light"
+            (click)="onClickValue('/', 'function')"
           >
             /
           </button>
@@ -61,7 +68,7 @@
 
       <div class="flex w-full">
         <!-- number 7 button -->
-        <div class="w-1/4 border-r border-b border-x-red-400">
+        <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50 text-white text-xl font-light"
           >
@@ -71,7 +78,7 @@
         <!-- end number 7 button -->
 
         <!-- number 8 button -->
-        <div class="w-1/4 border-r border-b border-x-red-400">
+        <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50 text-white text-xl font-light"
           >
@@ -81,7 +88,7 @@
         <!-- end number 8 button -->
 
         <!-- number 9 button -->
-        <div class="w-1/4 border-r border-b border-x-red-400">
+        <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50 text-white text-xl font-light"
           >
@@ -91,7 +98,7 @@
         <!-- end number 9 button -->
 
         <!-- multiplication button -->
-        <div class="w-1/4 border-r border-b border-x-red-400">
+        <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50 text-white text-xl font-light"
           >
@@ -107,7 +114,7 @@
 
       <div class="flex w-full">
         <!-- number 4 button -->
-        <div class="w-1/4 border-r border-b border-x-red-400">
+        <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50 text-white text-xl font-light"
           >
@@ -117,7 +124,7 @@
         <!-- end number 4 button -->
 
         <!-- number 5 button -->
-        <div class="w-1/4 border-r border-b border-x-red-400">
+        <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50 text-white text-xl font-light"
           >
@@ -127,7 +134,7 @@
         <!-- end number 5 button -->
 
         <!-- number 6 button -->
-        <div class="w-1/4 border-r border-b border-x-red-400">
+        <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50s text-white text-xl font-light"
           >
@@ -137,7 +144,7 @@
         <!-- end number 6 button -->
 
         <!-- subtraction button -->
-        <div class="w-1/4 border-r border-b border-x-red-400">
+        <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50s text-white text-xl font-light"
           >
@@ -153,7 +160,7 @@
 
       <div class="flex w-full">
         <!-- number 1 button -->
-        <div class="w-1/4 border-r border-b border-x-red-400">
+        <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50s text-white text-xl font-light"
           >
@@ -163,7 +170,7 @@
         <!-- end number 1 button -->
 
         <!-- number 2 button -->
-        <div class="w-1/4 border-r border-b border-x-red-400">
+        <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50s text-white text-xl font-light"
           >
@@ -173,7 +180,7 @@
         <!-- end number 2 button -->
 
         <!-- number 3 button -->
-        <div class="w-1/4 border-r border-b border-x-red-400">
+        <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50s text-white text-xl font-light"
           >
@@ -183,7 +190,7 @@
         <!-- end number 3 button -->
 
         <!-- addition button -->
-        <div class="w-1/4 border-r border-b border-x-red-400">
+        <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50s text-white text-xl font-light"
           >
