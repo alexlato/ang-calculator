@@ -71,6 +71,7 @@
         <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50 text-white text-xl font-light"
+            (click)="onClickValue('7', 'number')"
           >
             7
           </button>
@@ -81,6 +82,7 @@
         <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50 text-white text-xl font-light"
+            (click)="onClickValue('8', 'number')"
           >
             8
           </button>
@@ -91,6 +93,7 @@
         <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50 text-white text-xl font-light"
+            (click)="onClickValue('9', 'number')"
           >
             9
           </button>
@@ -101,11 +104,12 @@
         <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50 text-white text-xl font-light"
+            (click)="onClickValue('*', 'function')"
           >
             *
           </button>
         </div>
-        <!-- end nmultiplication button -->
+        <!-- end multiplication button -->
       </div>
 
       <!-- end of second row -->
@@ -117,6 +121,7 @@
         <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50 text-white text-xl font-light"
+            (click)="onClickValue('4', 'number')"
           >
             4
           </button>
@@ -127,6 +132,7 @@
         <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50 text-white text-xl font-light"
+            (click)="onClickValue('5', 'number')"
           >
             5
           </button>
@@ -137,6 +143,7 @@
         <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50s text-white text-xl font-light"
+            (click)="onClickValue('6', 'number')"
           >
             6
           </button>
@@ -147,6 +154,7 @@
         <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50s text-white text-xl font-light"
+            (click)="onClickValue('-', 'function')"
           >
             -
           </button>
@@ -163,6 +171,7 @@
         <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50s text-white text-xl font-light"
+            (click)="onClickValue('1', 'number')"
           >
             1
           </button>
@@ -173,6 +182,7 @@
         <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50s text-white text-xl font-light"
+            (click)="onClickValue('2', 'number')"
           >
             2
           </button>
@@ -183,6 +193,7 @@
         <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50s text-white text-xl font-light"
+            (click)="onClickValue('3', 'number')"
           >
             3
           </button>
@@ -193,6 +204,7 @@
         <div class="w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none focus:outline-none hover:bg-red-600 hover:bg-opacity-50s text-white text-xl font-light"
+            (click)="onClickValue('+', 'function')"
           >
             +
           </button>
@@ -208,6 +220,7 @@
         <div class="flex w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none hover:bg-red-700 hover:bg-opacity-50 text-white text-xl font-light"
+            (click)="onClickValue('0', 'number')"
           >
             0
           </button>
@@ -218,6 +231,7 @@
         <div class="flex w-1/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none hover:bg-red-700 hover:bg-opacity-50 text-white text-xl font-light"
+            (click)="onClickValue('.', 'function')"
           >
             .
           </button>
@@ -226,6 +240,7 @@
         <div class="w-2/4 border-r border-b border-red-400">
           <button
             class="w-full h-16 outline-none hover:bg-red-700 hover:bg-opacity-50 text-white text-xl font-light"
+            (click)="onClickValue('=', 'function')"
           >
             =
           </button>

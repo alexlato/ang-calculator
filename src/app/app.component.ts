@@ -11,7 +11,21 @@ export class AppComponent {
   calValue: number = 0;
   funcT: any = 'NoFunction';
 
+  calNumber: string = 'noValue';
+
   onClickValue(val: string, type: any) {
-    console.log(val, type);
+    if (type == 'number') {
+      this.onNumberClick(val);
+    }
+  }
+
+  onNumberClick(val: string) {
+    if (this.calNumber != 'noValue') {
+      this.calNumber = this.calNumber + val;
+    } else {
+      this.calNumber = val;
+    }
+
+    this.calValue = parseFloat(this.calNumber);
   }
 }
