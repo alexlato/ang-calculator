@@ -13,9 +13,14 @@ export class AppComponent {
 
   calNumber: string = 'noValue';
 
+  firstNumber: number = 0;
+  secondNumber: number = 0;
+
   onClickValue(val: string, type: any) {
     if (type == 'number') {
       this.onNumberClick(val);
+    } else if (type == 'function') {
+      this.onFunctionClick(val);
     }
   }
 
@@ -27,5 +32,26 @@ export class AppComponent {
     }
 
     this.calValue = parseFloat(this.calNumber);
+  }
+
+  onFunctionClick(val: string) {
+    if (this.funcT == 'NoFunction') {
+      this.firstNumber = this.calValue;
+      this.calValue = 0;
+      this.calNumber = 'noValue';
+      this.funcT = val;
+    } else if (this.funcT != 'NoFunction') {
+      this.secondNumber = this.calValue;
+      //calculation
+
+      this.valueCalculate(val);
+    }
+  }
+
+  valueCalculate(val: string) {
+    if (this.funcT == '+') {
+      const Total = this.firstNumber + this.secondNumber;
+      this.calValue = Total;
+    }
   }
 }
